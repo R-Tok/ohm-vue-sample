@@ -4,18 +4,34 @@
   <meta charset="UTF-8">
   <title>Hello, World!</title>
   <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+  <!-- バージョン2指定で読み込み <script src="https://unpkg.com/vue@2"></script> -->
 </head>
 <body>
 <div id="app">
   {{ message }}
 </div>
+
+<script>
+  const app = {
+    
+    data() {
+      return {
+        message: "Hello World!"
+      }     
+    }
+  }
+  Vue.createApp(app).mount("#app")
+</script>
+
+<!-- バージョン2の読み込み 
 <script>
   new Vue({
-    el: '#app',
+    el: "#app",
     data: {
-      message: 'Hello World!'
+      message: "Hello World!"
     }
-  })
+  });
 </script>
+-->
 </body>
 </html>
